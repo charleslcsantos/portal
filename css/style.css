@@ -1,0 +1,194 @@
+/*
+ * Estilo Geral 
+ */
+.slider {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.slides {
+  height: 100%;
+  /**
+	 * Prevent blinking issue
+	 * Not tested. Experimental.
+	 */
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+.slide {
+  height: 100%;
+  float: left;
+  clear: none;
+}
+.slider-arrow {
+  position: absolute;
+  display: block;
+  margin-bottom: -20px;
+  background-image: url(../img/glide-arrows.png);
+  width: 17px;
+  height: 28px;
+  padding: 0;
+}
+.slider-arrow--right {
+  bottom: 50%;
+  right: 30px;
+  margin-right: 36px;
+  background-position: -17px 0;
+}
+.slider-arrow--left {
+  bottom: 50%;
+  left: 30px;
+  margin-left: 36px;
+  background-position: 0 0;
+}
+.slider-nav {
+  position: absolute;
+  bottom: 30px;
+}
+.slider-nav__item {
+  width: 12px;
+  height: 12px;
+  float: left;
+  clear: none;
+  display: block;
+  margin: 0 5px;
+  background: #fff;
+}
+.slider-nav__item:hover {
+  background: #ccc;
+}
+.slider-nav__item--current {
+  background: #ccc;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+body {
+  font-family: 'Calibri', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', 'Open Sans', Arial, sans-serif !important;
+  padding-top: 130px;
+}
+.topbar {
+  height: 40px;
+  background-color: #ECECEC;
+}
+.topbar .container a {
+  padding: 10px;
+  margin-right: 18px;
+  float: right;
+  font-size: 14px;
+  color: black;
+}
+.topbar .container a span {
+  margin-right: 10px;
+}
+header {
+  border-radius: 0 !important;
+  z-index: 100;
+  position: fixed !important;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 130px;
+  top: 0;
+  margin: 0;
+  transition: top 0.2s ease-in-out;
+}
+header .content {
+  bottom: 0;
+  margin: 0 auto;
+}
+header .content .logo {
+  display: block;
+  background-repeat: no-repeat;
+  /*background-image: url("../img/logoMb2.png");*/
+  height: 100px;
+  width: 135px;
+  float: left;
+}
+header .content nav .current {
+  background-color: rgba(238, 238, 238, 0);
+}
+header .content nav .current a {
+  color: #00A8E9;
+  border-bottom: 1px solid rgba(0, 168, 233, 0.35);
+}
+header .content nav ul {
+  margin-top: 20px;
+}
+header .content nav ul li {
+  font-size: 15px;
+}
+header .content nav ul li a {
+  color: #757575;
+}
+header .content nav ul li a:hover {
+  background-color: rgba(238, 238, 238, 0);
+  color: #00A8E9;
+  border-bottom: 1px solid rgba(0, 168, 233, 0.35);
+}
+header .content nav ul li a:hover a {
+  color: #00A8E9;
+  border-bottom: 1px solid rgba(0, 168, 233, 0.35);
+}
+.nav-up {
+  top: -40px;
+}
+.wrapper {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.wrapper .slider {
+  color: white;
+}
+.wrapper .slider img {
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+}
+.container h2 {
+  text-align: center;
+  color: #555;
+  font-size: 350%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.container p {
+  font-size: 18px;
+  text-align: justify;
+}
+.item-view {
+  padding-top: 100px;
+}
+#about {
+  background-color: white;
+}
+#services {
+  background-color: #F3F3F3;
+}
+#products {
+  background-color: white;
+}
+#contact {
+  background-color: #F3F3F3;
+}
+.map {
+  height: 100%;
+  width: 100%;
+}
+.footer {
+  height: 100px;
+  width: 100%;
+  background-color: #002247;
+  border-top: 2px solid #008EEE;
+}
