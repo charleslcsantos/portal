@@ -19,7 +19,6 @@
 
 body {
 	font-family: 'Calibri', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', 'Open Sans', Arial, sans-serif !important;
-	padding-top: @menu_size;
 }
 
 .topbar {
@@ -71,6 +70,9 @@ header {
 					color: @site_color;
 					border-bottom: 5px solid @site_color;
 					padding-bottom: 20px;
+					&:focus {
+						background-color: #FFF;
+					}
 				}
 			}
 			ul {
@@ -102,11 +104,38 @@ header {
 	background-repeat: no-repeat;
 	background-size: 100%;
 
-	.slider {
+	.slider {		
+		color: white;  
+		padding-top: @menu_size;
 		img {
 			width: 100%;
 		}
-		color: white; 
+		.slide {
+			.slide-message {
+				position: absolute;
+				top: 40%;
+				margin-left: 3%;
+				h1 {
+					font-size: 450%;
+					margin-bottom: 0;
+				}
+				p {
+					font-size: 200%;
+				}
+				a.btn-slide {
+					border: 2px solid #FFF;
+					background: none;
+					padding: 10px 35px;
+					font-size: 20px;
+					border-radius: 10px; 
+					color: #FFF;
+					&:hover {
+						background-color: #FFF;
+						color: #00194A;
+					}
+				}
+			}
+		}
 	}
 
 	.btn-default {
@@ -135,7 +164,7 @@ header {
 		text-align: center;
 		color: #00415A;
 		font-size: 350%;
-		margin-top: 25px;
+		margin-top: 30px;
 		margin-bottom: 30px;
 	}
 	h3 {

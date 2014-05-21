@@ -74,7 +74,6 @@
 }
 body {
   font-family: 'Calibri', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', 'Open Sans', Arial, sans-serif !important;
-  padding-top: 115px;
 }
 .topbar {
   height: 40px;
@@ -119,6 +118,9 @@ header .content nav .current a {
   border-bottom: 5px solid #045d9a;
   padding-bottom: 20px;
 }
+header .content nav .current a:focus {
+  background-color: #FFF;
+}
 header .content nav ul {
   margin-top: 15px;
 }
@@ -139,6 +141,9 @@ header .content nav ul li a:hover a {
   border-bottom: 5px solid #045d9a;
   padding-bottom: 20px;
 }
+header .content nav ul li a:hover a:focus {
+  background-color: #FFF;
+}
 .nav-up {
   top: -40px;
 }
@@ -149,9 +154,34 @@ header .content nav ul li a:hover a {
 }
 .wrapper .slider {
   color: white;
+  padding-top: 115px;
 }
 .wrapper .slider img {
   width: 100%;
+}
+.wrapper .slider .slide .slide-message {
+  position: absolute;
+  top: 40%;
+  margin-left: 3%;
+}
+.wrapper .slider .slide .slide-message h1 {
+  font-size: 450%;
+  margin-bottom: 0;
+}
+.wrapper .slider .slide .slide-message p {
+  font-size: 200%;
+}
+.wrapper .slider .slide .slide-message a.btn-slide {
+  border: 2px solid #FFF;
+  background: none;
+  padding: 10px 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #FFF;
+}
+.wrapper .slider .slide .slide-message a.btn-slide:hover {
+  background-color: #FFF;
+  color: #00194A;
 }
 .wrapper .btn-default {
   border: none;
@@ -180,7 +210,7 @@ header .content nav ul li a:hover a {
   text-align: center;
   color: #00415A;
   font-size: 350%;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 .item-view h3 {
