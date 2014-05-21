@@ -16,13 +16,23 @@
 	<script>
 		var map;
 		function initialize() {
+		  var myLatlng = new google.maps.LatLng(-12.993971,-38.453877);
 		  var mapOptions = {
 		    zoom: 15,
 		    scrollwheel: false,
-		    center: new google.maps.LatLng(-12.993971,-38.453877)
+		    center: myLatlng,
 		  };
 		  map = new google.maps.Map(document.getElementById('map-canvas'),
 		      mapOptions);
+
+		  var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: "MB Solutions"
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+              infowindow.open(map,marker);
+          });
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
@@ -76,11 +86,11 @@
 				<div class="col-md-6">
 					<h3>Quem somos</h3>
 					<p>A MB Solutions, através da solução "Assessor Público", oferece aos Prefeitos, Secretários e demais executivos da Administração Pública, uma oportunidade singular de modernizar os seus sistemas de informação.
-	O nosso objetivo é otimizar e tornar mais eficiente toda estrutura organizacional da Entidade Pública. Para isso, oferecemos produtos de alta qualidade e abrangência, com soluções dinâmicas e atuais.</p>
-	<p>Com inteligência e atenção, diagnósticamos, implantamos e operamos com confiança a migração de sistemas e, sobretudo, nos comprometemos tanto com a pronta assessoria quanto com o treinamento e o suporte técnico adequado. Atuamos com uma equipe de profissionais altamente qualificados, ferramentas de desenvolvimento atualizadas e equipamentos de última geração.</p>
+					O nosso objetivo é otimizar e tornar mais eficiente toda estrutura organizacional da Entidade Pública. Para isso, oferecemos produtos de alta qualidade e abrangência, com soluções dinâmicas e atuais.</p>
 				</div> 
 				<div class="col-md-6">
-
+					<h3>O que fazemos</h3>
+					<p>Com inteligência e atenção, diagnósticamos, implantamos e operamos com confiança a migração de sistemas e, sobretudo, nos comprometemos tanto com a pronta assessoria quanto com o treinamento e o suporte técnico adequado. Atuamos com uma equipe de profissionais altamente qualificados, ferramentas de desenvolvimento atualizadas e equipamentos de última geração.</p>
 				</div>	
 			</div>
 		</div>
@@ -88,21 +98,100 @@
 	<div id="services" class="item-view">
 		<div class="container">
 			<h2>Serviços</h2>
+			<div class="row">
+
+			</div>
 		</div>
 	</div>
 	<div id="products" class="item-view">
 		<div class="container">
 			<h2>Produtos</h2>
+			<div class="row">
+				<div class="product-detail">
+					<img src="img/fiscal.png">
+				    <h3>Gestão Fiscal</h3>
+				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="product-detail">
+					<img src="img/cidadao.png">
+				    <h3>Atendimento ao Cidadão</h3>
+				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="product-detail">
+					<img src="img/social.png">
+				    <h3>Gestão Social</h3>
+				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="product-detail">
+					<img src="img/gestao.png">
+				    <h3>Gestão Pública</h3>
+				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div id="contact" class="item-view">
-		<div id="map-canvas" class="map">
-		</div>
+	<div id="contact" class="item-view"> 
 		<div class="container">
 			<h2>Contato</h2> 
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Trabalhe conosco!</h3>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				</div> 
+				<div class="col-md-4">
+				  	<h3>Contato</h3>
+					<form name="formulario" method="post" action="submit.php" role="form">
+				  		<div class="form-group">
+				  			<label for="nome">Nome</label>
+						  	<input name="nome" id="nome" class="form-control" type="text" placeholder="Digite seu nome"/>
+				  		</div>
+
+				  		<div class="form-group">
+				  			<label for="email">Email</label>
+						  	<input name="email" id="email" class="form-control" type="text" placeholder="Digite seu Email" />
+				  		</div>
+				  		
+				  		<div class="form-group">
+				  			<label for="telefone">Telefone</label>
+						  	<input name="telefone" id="telefone" class="form-control" type="text" placeholder="Digite seu Telefone" />
+				  		</div>  
+				  		<div class="form-group">
+				  			<label for="email">Email</label>
+						  	<textarea name="mensagem" name="text" id="mensagem" class="form-control" placeholder="Digite sua Messagem"></textarea> 
+						</div>
+						<input class="btn btn-default btn-block" type="button" id="enviar" onclick="valida();" value="Enviar!">	
+					</form>
+				</div> 
+				<div class="col-md-4">
+					<h3>Informações para Contato</h3>
+					<p>Rua dos Maçons<br>
+						121 - Pituba<br>
+						Salvador - BA<br>
+					<strong>Telefone:</strong> 71 3351-0311<br>
+					<strong>Fax:</strong> 71 3351-0311<br><br>
+					<strong>Website:</strong> <a href="http://www.portalmb.com.br">MBSolutions.com</a><br>
+					<strong>Email:</strong> administracao@portalmb.com.br<br><br> 		
+					</p>
+				</div> 
+			</div>  
 		</div>
+		<div id="map-canvas" class="map">
+		</div>  
 	</div>
-	<div class="footer"></div>
+	<div class="footer">
+		<div class="container"> 
+		    <div class="left">
+		    	Rua dos Maçons, 121 - Pituba Salvador - BA, CEP: 41810-205 Fone: (0xx)71 3351-0311.
+		    </div> 
+			<div class="right">Todos os direitos reservados © 2013 · <a href="http://www.portalmb.com.br/">MB Solutions</a></div>
+		</div>	 
+	</div>
 </div>
 </body>
 </html>

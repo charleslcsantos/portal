@@ -74,54 +74,53 @@
 }
 body {
   font-family: 'Calibri', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', 'Open Sans', Arial, sans-serif !important;
-  padding-top: 130px;
+  padding-top: 115px;
 }
 .topbar {
   height: 40px;
-  background-color: #ECECEC;
+  background-color: #045d9a;
 }
 .topbar .container a {
   padding: 10px;
   margin-right: 18px;
   float: right;
   font-size: 14px;
-  color: black;
+  color: #FFF;
 }
 .topbar .container a span {
   margin-right: 10px;
 }
 header {
   border-radius: 0 !important;
+  border-bottom: 1px solid #E5E5E5;
   z-index: 100;
   position: fixed !important;
   background: rgba(255, 255, 255, 0.9);
   width: 100%;
-  height: 130px;
+  height: 115px;
   top: 0;
   margin: 0;
   transition: top 0.2s ease-in-out;
 }
-header .content {
-  bottom: 0;
-  margin: 0 auto;
-}
 header .content .logo {
   display: block;
   background-repeat: no-repeat;
-  /*background-image: url("../img/logoMb2.png");*/
-  height: 100px;
-  width: 135px;
+  background-image: url("../img/logoMb1.png");
+  height: 57px;
+  width: 247px;
+  margin: 12px 0;
   float: left;
 }
 header .content nav .current {
   background-color: rgba(238, 238, 238, 0);
 }
 header .content nav .current a {
-  color: #00A8E9;
-  border-bottom: 1px solid rgba(0, 168, 233, 0.35);
+  color: #045d9a;
+  border-bottom: 5px solid #045d9a;
+  padding-bottom: 20px;
 }
 header .content nav ul {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 header .content nav ul li {
   font-size: 15px;
@@ -131,12 +130,14 @@ header .content nav ul li a {
 }
 header .content nav ul li a:hover {
   background-color: rgba(238, 238, 238, 0);
-  color: #00A8E9;
-  border-bottom: 1px solid rgba(0, 168, 233, 0.35);
+  color: #045d9a;
+  border-bottom: 5px solid #045d9a;
+  padding-bottom: 20px;
 }
 header .content nav ul li a:hover a {
-  color: #00A8E9;
-  border-bottom: 1px solid rgba(0, 168, 233, 0.35);
+  color: #045d9a;
+  border-bottom: 5px solid #045d9a;
+  padding-bottom: 20px;
 }
 .nav-up {
   top: -40px;
@@ -152,43 +153,110 @@ header .content nav ul li a:hover a {
 .wrapper .slider img {
   width: 100%;
 }
-.container {
-  height: 100%;
-  width: 100%;
+.wrapper .btn-default {
+  border: none;
+  background: #1088DB;
+  border-bottom: 5px solid;
+  border-color: #005B99;
+  color: #FFF;
+  padding: 10px 0;
 }
-.container h2 {
-  text-align: center;
-  color: #555;
-  font-size: 350%;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-.container p {
-  font-size: 18px;
-  text-align: justify;
+.wrapper .btn-default:hover,
+.wrapper .btn-default:active,
+.wrapper .btn-default:focus {
+  background-color: #1295F0;
+  color: #FFF;
+  border-color: #005B99;
 }
 .item-view {
-  padding-top: 100px;
+  padding-top: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.item-view .container {
+  padding-bottom: 60px;
+}
+.item-view h2 {
+  text-align: center;
+  color: #00415A;
+  font-size: 350%;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.item-view h3 {
+  margin-bottom: 20px;
+  color: #045d9a;
+}
+.item-view p {
+  font-size: 18px;
+  text-align: justify;
+  color: #A4A4A4;
 }
 #about {
   background-color: white;
 }
 #services {
-  background-color: #F3F3F3;
+  background-image: url("../img/servicesBg.jpg");
+  height: 100%;
+}
+#services h2 {
+  color: #FFF;
 }
 #products {
-  background-color: white;
+  background-color: #273E57;
+}
+#products h2 {
+  color: #FFF;
+}
+#products .product-detail {
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #223952;
+  box-shadow: 0 5px #1B2F45;
+  height: auto;
+  position: relative;
+}
+#products .product-detail img {
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+#products .product-detail h3 {
+  color: #FFF;
+}
+#products .product-detail p {
+  color: #F7F7F7;
+  margin-bottom: 15px;
 }
 #contact {
-  background-color: #F3F3F3;
+  background-color: #FFF;
 }
 .map {
-  height: 100%;
+  height: 50%;
   width: 100%;
+  margin-top: 50px;
 }
 .footer {
-  height: 100px;
+  height: 60px;
   width: 100%;
-  background-color: #002247;
+  background-color: #045D9A;
   border-top: 2px solid #008EEE;
+  font-size: 13px;
+  color: #E0F1FF;
+  padding-top: 20px;
+}
+.footer a {
+  color: #E0F1FF;
+  font-weight: 700;
+}
+.footer a:hover {
+  color: #FFF;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
 }

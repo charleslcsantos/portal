@@ -36,3 +36,17 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+function valida(){
+
+    var nome = document.getElementById("nome");
+    var email = document.getElementById("email");
+    var mensagem = document.getElementById("mensagem");
+
+    if((nome.value == "") || (email.value == "") || (mensagem.value == "")){
+        alert("Preencha os campos obrigatórios");
+    } else {
+        document.formulario.submit();
+    }
+
+}
