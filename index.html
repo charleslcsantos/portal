@@ -41,7 +41,7 @@
 </head>
 <body>
 <div class="wrapper">  
-	<header class="nav-down">
+	<header class="nav-down" role="header">
 		<div class="topbar">
 			<div class="container">
 				<a href="http://sistemas.portalmb.com.br:8080/MBLine/pages/login.jsf"><span class="glyphicon glyphicon-send"></span>Acesso ao MB Line</a>
@@ -49,8 +49,12 @@
 		</div>
 		<div class="content container">
 			<a class="logo" href="http://www.portalmb.com.br"></a>
-			<nav class="collapse navbar-collapse">
-				<ul id="nav" class="nav navbar-nav navbar-right"> 
+			
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+			<nav class="navbar-collapse collapse" role="navigation">
+				<ul id="nav" class="navbar-nav nav navbar-right"> 
 					<li class="current"><a href="#home">Página Inicial</a></li>
 					<li><a href="#about">A Empresa</a></li>
 					<li><a href="#services">Serviços</a></li>
@@ -108,6 +112,12 @@
 					<p>Com inteligência e atenção, diagnósticamos, implantamos e operamos com confiança a migração de sistemas e, sobretudo, nos comprometemos tanto com a pronta assessoria quanto com o treinamento e o suporte técnico adequado. Atuamos com uma equipe de profissionais altamente qualificados, ferramentas de desenvolvimento atualizadas e equipamentos de última geração.</p>
 				</div>	
 			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Diferencial</h3>
+					<p>A MB Solutions possui uma postura de total comprometimento com a qualidade e a seriedade dos serviços oferecidos. Nosso setor de Soluções Tecnológicas busca, de modo obstinado, soluções inteligentes e recursos na área de informática, de modo a tornar a Atividade Pública cada vez mais eficiente. Acreditamos em relacionamentos fortes e duradouros com os nossos clientes. Visão arrojada e atuação qualificada no mercado é, e sempre será, o nosso cartão	de visitas.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="services" class="item-view">
@@ -119,36 +129,100 @@
 		</div>
 	</div>
 	<div id="products" class="item-view">
-		<div class="container">
+		<div class="container"> 
 			<h2>Produtos</h2>
-			<div class="row">
-				<div class="product-detail">
-					<img src="img/fiscal.png">
-				    <h3>Gestão Fiscal</h3>
-				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+			<div class="row products">
+				<div class="col-md-3">
+					<div class="radio">
+						<label>
+							<input type="radio" name="products" id="radioFiscal" onclick="viewProduct('produto1')">
+							<img src="img/fiscal.png">
+						    <h3>Gestão Fiscal</h3>
+						</label>
+					</div>
+					<div class="product-detail p1 fade out ocultar" id="produto1"> 
+					    <div class="arrow"></div>
+					    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+					    <div class="row">
+						    <div class="accordion">
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão Orçamentária, Contábil e Financeira</a>
+									<p>Permite o Planejamento Orçamentário, PPA, LDO e LOA, contempla todo o controle de execução do orçamento aprovado, em seus diversos aspectos e necessidades, permite os pagamentos e o controle financeiro orçamentário e extra orçamentário realizado pela tesouraria, gera e mantém os controles contábeis e faz a prestação de contas eletrônica para os Tribunais de Contas Municipais, Estaduais ou Federais, seguindo toda a legislação vigente no Brasil. </p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão das Receitas Municipais</a>
+									<p>Faz a gestão da receita Pública Municipal, desde a geração até o controle de dividas geradas para os participantes dela. Permite que sejam realizados todos os controles para a Execução Fiscal, Contencioso, Lançamentos e as diversas rotinas que compõem os controles sobre os tributos de responsabilidade do Município. Mantém cadastros técnicos para todos estes tributos, tendo controles específicos para ISSQN, IPTU, Contribuição de Melhorias, ITBI, Repasses Estaduais e Federais, e todos os outros tributos e taxas geridos pelo Município.</p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão do ISSQN online</a>
+									<p>Software gerenciador do tributo exclusivo do município, com emissão de Nota Fiscal Eletrônica que organiza e amplia a arrecadação, influencia a receita do ICMS e promove justiça fiscal. O sistema é disponibilizado na Web. Fácil e descomplicada integração com os sistemas tributários municipais e da Dívida ativa, permitindo rápida implantação.</p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão de Compras e Licitações</a>
+									<p>Possibilita o controle integral de todo o processo de compras, desde a solicitação, autorização, cotação eletrônica, licitação ou dispensa, até a compra efetiva. Possui controle sobre todas as fases das diversas modalidades de licitação, controla fornecimentos e contratos, tem modulo especifico para pregoes e registro de preço, e é totalmente integrado com os demais módulos contábeis e administrativos, e segue todas as legislações vigentes no Brasil.</p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão do Patrimônio</a>
+									<p>Faz a gestão de todo o patrimônio público, desde a integração com o modulo de compras e materiais, que controlam a aquisição do bem, e depois o envia para a incorporação, passando então a controlar a movimentação, reavaliações, depreciações, até a baixa definitiva do bem. Mantem cadastro atualizado, controlam garantias, seguros, responsabilidades e, para os bens imóveis, possui integração com o modulo de gestão de das receitas municipais, que permite o controle integral de todos os tipos de bens.</p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão de Materiais e Almoxarifados</a>
+									<p>Integrado com os demais sistemas, controla diversos almoxarifados existentes no poder público, de forma integrada e descentralizada. Permite a efetiva gestão sobre os recursos materiais, controla necessidades de compras e armazenamento. Possui controles de lotes e validades, permite a rastreabilidade de qualquer item do estoque e integra com diversos módulos da solução para uma gestão ampla dos recursos materiais disponíveis e em falta dos almoxarifados público.</p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão de Frota</a>
+									<p>Registra e controla todos os veículos e maquinas dos órgãos públicos quanto a sua utilização, usuários e motoristas. Controla gastos e ocorrências nestas utilizações, como multas, despesas de viagem, consumo de combustível e problemas mecânicos. Integra com os demais sistemas administrativos e contábeis, faz o controle de pneus, garantias, seguro obrigatório e licenciamento, e todos os demais controles importantes para a efetiva gestão da frota a serviço do poder público.</p>
+								</div>
+								<div class="item over" onclick="viewItem(this)">
+									<a >Gestão de Pessoas e Folha de Pagamento</a>
+									<p>Faz a gestão integral das informações dos Recursos Humanos, registradas de forma descentralizada pelos Órgãos e Entidades Públicas, desde a seleção funcional, suas progressões e acompanhamento, até o desligamento do funcionário. Calcula e controla os eventos da Folha de Pagamentos, é aderente a legislação vigente e aos estatutos de cada entidade, com emissão e publicação automática de Portarias na internet e se integra com outros módulos da solução para fornecer informações funcionais, como holerites eletrônicos, recibos de férias e outros documentos.</p>
+								</div>
+							</div> 
+					    </div>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="product-detail">
-					<img src="img/cidadao.png">
-				    <h3>Atendimento ao Cidadão</h3>
-				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				<div class="col-md-3">
+					<div class="radio">
+						<label>
+							<input type="radio" name="products" id="radioCidadao" onclick="viewProduct('produto2')" >
+							<img src="img/cidadao.png">
+							<h3>Atendimento ao Cidadão</h3>
+						</label>
+					</div>
+					<div class="product-detail p2 fade out ocultar" id="produto2">
+					    <div class="arrow"></div>
+					    <p class="list-group-item-text">Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="product-detail">
-					<img src="img/social.png">
-				    <h3>Gestão Social</h3>
-				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				<div class="col-md-3">
+					<div class="radio">
+						<label>
+							<input type="radio" name="products" id="radioSocial" onclick="viewProduct('produto3')">
+							<img src="img/social.png">
+						    <h3>Gestão Social</h3>
+						</label>
+					</div>
+					<div class="product-detail p3 fade out ocultar" id="produto3">
+					    <div class="arrow"></div>
+					    <p class="list-group-item-text">Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="product-detail">
-					<img src="img/gestao.png">
-				    <h3>Gestão Pública</h3>
-				    <p class="list-group-item-text">Os produtos componentes do Sistema Integrado de Gestão Fiscal do grupo Assessor Público são desenvolvidos em linguagem gráfica e banco de dados relacional. Possuem alto grau de integração e parametrização, permitindo a sua adequação aos mais diversos portes e estágios de informatização. Possibilita que a solução seja trabalhada conforme a prioridade e necessidades da Administração</p>
+				<div class="col-md-3">
+					<div class="radio">
+						<label>
+							<input type="radio" name="products" id="radioGestao" onclick="viewProduct('produto4')">
+							<img src="img/gestao.png">
+						    <h3>Gestão Pública</h3>
+						</label>
+					</div>
+					<div class="product-detail p4 fade out ocultar" id="produto4">
+					    <div class="arrow"></div>
+					    <p class="list-group-item-text">Casamentiss faiz malandris se pirulitá, Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer Ispecialista im mé intende tudis nuam golada, vinho, uiski, carirí, rum da jamaikis, só num pode ser mijis. Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+					</div>
 				</div>
+				
 			</div>
+			
 		</div>
 	</div>
 	<div id="contact" class="item-view"> 
@@ -163,12 +237,12 @@
 				  	<h3>Contato</h3>
 					<form name="formulario" method="post" action="submit.php" role="form">
 				  		<div class="form-group">
-				  			<label for="nome">Nome</label>
+				  			<label for="nome">Nome*</label>
 						  	<input name="nome" id="nome" class="form-control" type="text" placeholder="Digite seu nome"/>
 				  		</div>
 
 				  		<div class="form-group">
-				  			<label for="email">Email</label>
+				  			<label for="email">Email*</label>
 						  	<input name="email" id="email" class="form-control" type="text" placeholder="Digite seu Email" />
 				  		</div>
 				  		
@@ -177,7 +251,7 @@
 						  	<input name="telefone" id="telefone" class="form-control" type="text" placeholder="Digite seu Telefone" />
 				  		</div>  
 				  		<div class="form-group">
-				  			<label for="email">Email</label>
+				  			<label for="mensagem">Mensagem*</label>
 						  	<textarea name="mensagem" name="text" id="mensagem" class="form-control" placeholder="Digite sua Messagem"></textarea> 
 						</div>
 						<input class="btn btn-default btn-block" type="button" id="enviar" onclick="valida();" value="Enviar!">	
