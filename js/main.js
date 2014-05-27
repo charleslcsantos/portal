@@ -56,6 +56,14 @@ function valida(){
 
 }
 
+function viewService(arg){
+    $('#service1').removeClass("fade in").addClass('fade out ocultar');
+    $('#service2').removeClass("fade in").addClass('fade out ocultar');
+    $('#service3').removeClass("fade in").addClass('fade out ocultar');
+
+    $('#'+arg).removeClass('fade out ocultar').addClass("fade in");
+}
+
 function viewProduct(arg){
     $('#produto1').removeClass("fade in").addClass('fade out ocultar');
     $('#produto2').removeClass("fade in").addClass('fade out ocultar');
@@ -69,7 +77,9 @@ function viewProduct(arg){
 function closeItens() {
     var elements = document.querySelectorAll("div.item"), i;
     for (i=0; i<elements.length; i++) {
-        viewItem(elements[i]);
+        if(hasClass(elements[i], 'over')===true) {
+            $(elements[i]).removeClass('over');
+        }
     }
 }
 
