@@ -56,6 +56,10 @@ function valida(){
 
 }
 
+function cr_valida () {
+    alert("Jóia! Seu currículo foi enviado. Nosso RH irá analisar o seu currículo e entraremos em contato");
+}
+
 function viewService(arg){
     $('#service1').removeClass("fade in").addClass('fade out ocultar');
     $('#service2').removeClass("fade in").addClass('fade out ocultar');

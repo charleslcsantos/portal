@@ -470,6 +470,16 @@ header .content nav.in a {
 #contact {
   background-color: #FFF;
 }
+.cr-form {
+  background-color: #FAFAFA;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #FCFCFC;
+  box-shadow: 1px 1px #ECECEC;
+}
+.cr-form .btn-default {
+  padding: 5px 20px;
+}
 .map {
   height: 50%;
   width: 100%;
@@ -550,6 +560,12 @@ header .content nav.in a {
 .accordion .item a:hover {
   color: #5D5D5D;
   text-decoration: none;
+}
+.accordion .item-xl.over {
+  height: 220px;
+}
+.accordion .item-xl.over p {
+  height: 185px;
 }
 .accordion .over {
   height: 125px;

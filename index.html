@@ -297,7 +297,28 @@
 					</div>
 					<div class="product-detail p3 fade out ocultar" id="produto3">
 					    <div class="arrow"></div>
-					    <p class="list-group-item-text">Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+					    <div class="row">
+						    <div class="accordion">
+								<div class="item" onclick="viewItem(this)">
+									<a>Ouvidoria Pública</a>
+									<p>Faz a gestão integral do sistema de saúde pública municipal, registrando e controlando todos os eventos de atendimento médico, de enfermagem e odontológicos realizados a população. Controlam programas Ministeriais, estoque das farmácias que fazem dispensação de medicamentos, campanhas de vacinação, controla laboratórios de exames clínicos, enfim, atua controlando todas as ações que ocorrem nas unidades de saúde do município, gerando informações precisas para a gestão efetiva da saúde pública.</p>
+								</div>
+								<div class="item" onclick="viewItem(this)">
+									<a>Gestão da Educação</a>
+									<p>Faz a gestão do corpo docente e discente da educação pública, mantendo controle de matrículas, professores, notas e faltas, produção escolar e pedagógica, mantém históricos escolares e controle de todos os eventos que ocorrem no âmbito das instituições de ensino que compõe o sistema de educação pública municipal.</p>
+								</div>
+								<div class="item item-xl" onclick="viewItem(this)">
+									<a>Gestão da Ação Social</a>
+									<p>O sistema trabalha na plataforma web trazendo todas as facilidades, benefícios e agilidade que a internet propicia, podendo assim ser acessado de qualquer lugar e em qualquer momento, necessitando apenas de um navegador e acesso a internet.
+O controle de acesso ao sistema é totalmente personalizado e seguro, disponibilizando a criação de papeis e grupos de acesso, restringindo ou liberando cada usuário, com senha pessoal.
+A tela inicial do sistema é bem amigável, podendo inclusive adicionar atalhos de acesso rápido na área de trabalho do sistema das telas mais utilizadas.
+Conta ainda com relatórios padrões, facilitando a visualização e prestação de contas, além de relatórios personalizados, que auxiliam na gestão municipal. Os relatórios podem apresentar informação na forma de gráficos analíticos ou sintéticos,e ainda em mapas, facilitando a detecção dos índices de ocorrências ou situação da população, dividida por territórios ou com visão geral do município.
+O sistema carrega em seu cadastro, além das informações que auxiliam na tomada de decisões da gestão municipal, as informações do Cadastro Único (CadUnico).
+Possui um mensageiro interno para transmitir recados ou comunicados, selecionando os destinatários em grupo ou individualmente.
+Registra diagnósticos e pareceres sociais vinculados ao autor, com data e horário. Permite também anexação de fotos ao cadastro do domicílio, além de contar com o histórico de atendimentos e visitas domiciliares.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -327,7 +348,25 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h3>Trabalhe conosco!</h3>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+					<p>Seja mais um talento a integrar a equipe da MB Solutions, empresa destaque em Gestão Pública. Aqui os profissionais encontram desafios, oportunidades de desenvolvimento e aprendizado, além do excelente ambiente de trabalho. Faça parte desta seleção e venha crescer com a gente!</p>
+					<p>Preencha o formulário abaixo e anexe seu currículo</p>
+					<hr>
+					<form name="cr_form" method="post" action="#" class="cr-form" role="form">
+				  		<div class="form-group">
+				  			<label for="nome">Nome*</label>
+						  	<input name="nome" id="cr_nome" class="form-control" type="text" placeholder="Digite seu nome"/>
+				  		</div>
+
+				  		<div class="form-group">
+				  			<label for="email">Email*</label>
+						  	<input name="email" id="cr_email" class="form-control" type="text" placeholder="Digite seu Email" />
+				  		</div>
+				  		<div class="form-group">
+				  			<label for="mensagem">Curriculo em PDF*</label>
+				  			<input type="file" name="curriculo_pdf" id="cr_pdf" class="" placeholder="Selecione o curriculo" accept="application/pdf"> 
+						</div>
+						<input class="btn btn-default" type="button" id="enviar" onclick="cr_valida();" value="Enviar!">	
+					</form>
 				</div> 
 				<div class="col-md-4">
 				  	<h3>Contato</h3>
