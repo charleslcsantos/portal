@@ -395,6 +395,12 @@ header .content nav.in a {
 #services .service-cover .service-detail p span {
   font-size: 8px;
 }
+#products {
+  background-color: #002D55;
+}
+#products h2 {
+  color: #FFF;
+}
 .products .radio {
   padding: 0;
 }
@@ -406,8 +412,8 @@ header .content nav.in a {
 .products .radio h3 {
   text-align: center;
   margin: 0;
-  color: #656565;
-  font-weight: bold;
+  color: #FFF;
+  font-weight: normal;
   font-size: 18px;
 }
 .products .radio input[type=radio] {
@@ -416,7 +422,7 @@ header .content nav.in a {
 .products .product-detail {
   padding: 0 15px;
   margin: 30px 15px;
-  border-top: 1px dotted #E8E8E8;
+  border-top: 1px dotted rgba(232, 232, 232, 0.25);
 }
 @media (min-width: 992px) {
   .products .product-detail {
@@ -431,13 +437,14 @@ header .content nav.in a {
 }
 .products .product-detail p {
   margin: 15px 0;
+  color: #FFF;
 }
 .products .product-detail .arrow {
   width: 0;
   height: 0;
   border-left: 20px solid rgba(0, 0, 0, 0);
   border-right: 20px solid rgba(0, 0, 0, 0);
-  border-top: 25px solid #DEDEDE;
+  border-top: 25px solid rgba(255, 255, 255, 0.85);
 }
 @media (min-height: 480px) {
   .products .product-detail .arrow {
@@ -533,7 +540,7 @@ header .content nav.in a {
 .accordion .item p {
   height: 95px;
   padding: 5px;
-  border-left: 5px solid #DDEFFF;
+  border-left: 5px solid #063E6F;
   margin: 0;
 }
 @media (max-height: 480px) {
@@ -546,10 +553,9 @@ header .content nav.in a {
   display: block;
   line-height: 20px;
   padding: 5px;
-  color: #5D5D5D;
-  font-weight: bold;
+  color: #C6D7EC;
   cursor: pointer;
-  border-left: 5px solid #84B4DE;
+  border-left: 5px solid #1E78C7;
 }
 @media (max-height: 480px) {
   .accordion .item a {
@@ -558,7 +564,7 @@ header .content nav.in a {
   }
 }
 .accordion .item a:hover {
-  color: #5D5D5D;
+  color: #FDFEFF;
   text-decoration: none;
 }
 .accordion .item-xl.over {
@@ -574,4 +580,7 @@ header .content nav.in a {
   .accordion .over {
     height: auto;
   }
+}
+.accordion .over a {
+  color: #FDFEFF;
 }

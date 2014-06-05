@@ -57,7 +57,22 @@ function valida(){
 }
 
 function cr_valida () {
-    alert("Jóia! Seu currículo foi enviado. Nosso RH irá analisar o seu currículo e entraremos em contato");
+    alert("Jóia! Seu currículo foi enviado. Nosso RH irá analisa-lo e entrar em contato");
+}
+
+function simulate_click (btn) {
+    var el = document.getElementById(btn);
+
+    // Firefox
+    if (document.createEvent) {
+        var event = document.createEvent("MouseEvents");
+        event.initEvent("click", true, true);
+        el.dispatchEvent(event);
+    }
+    // IE
+    else if (el.click) {
+        el.click();
+    }
 }
 
 function viewService(arg){
