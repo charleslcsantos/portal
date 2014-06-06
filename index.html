@@ -351,21 +351,21 @@ Registra diagnósticos e pareceres sociais vinculados ao autor, com data e horá
 					<p>Seja mais um talento a integrar a equipe da MB Solutions, empresa destaque em Gestão Pública. Aqui os profissionais encontram desafios, oportunidades de desenvolvimento e aprendizado, além do excelente ambiente de trabalho. Faça parte desta seleção e venha crescer com a gente!</p>
 					<p>Preencha o formulário abaixo e anexe seu currículo</p>
 					<hr>
-					<form name="cr_form" method="post" action="#" class="cr-form" role="form">
+					<form name="cr_form" method="post" action="cr_submit.php" class="cr-form" role="form" enctype="multipart/form-data">
 				  		<div class="form-group">
 				  			<label for="nome">Nome*</label>
-						  	<input name="nome" id="cr_nome" class="form-control" type="text" placeholder="Digite seu nome"/>
+						  	<input name="cr_nome" id="cr_nome" class="form-control" type="text" placeholder="Digite seu nome"/>
 				  		</div>
 
 				  		<div class="form-group">
 				  			<label for="email">Email*</label>
-						  	<input name="email" id="cr_email" class="form-control" type="text" placeholder="Digite seu Email" />
+						  	<input name="cr_email" id="cr_email" class="form-control" type="text" placeholder="Digite seu Email" />
 				  		</div>
 				  		<div class="form-group">
 				  			<label for="mensagem">Curriculo em PDF*</label>
-				  			<input type="file" name="curriculo_pdf" id="cr_pdf" class="" placeholder="Selecione o curriculo" accept="application/pdf"> 
+				  			<input type="file" name="cr_pdf" id="cr_pdf" accept="application/pdf"> 
 						</div>
-						<input class="btn btn-default" type="button" id="enviar" onclick="cr_valida();" value="Enviar!">	
+						<input class="btn btn-default" type="submit" name="submit" onclick="return cr_valida();" value="Enviar!">	
 					</form>
 				</div> 
 				<div class="col-md-4">
@@ -385,6 +385,14 @@ Registra diagnósticos e pareceres sociais vinculados ao autor, com data e horá
 				  			<label for="telefone">Telefone</label>
 						  	<input name="telefone" id="telefone" class="form-control" type="text" placeholder="Digite seu Telefone" />
 				  		</div>  
+				  		<div class="form-group">
+				  			<label for="assunto">Assunto</label>
+				  			<select class="form-control" name="assunto" id="assunto">
+							  <option>Proposta Comercial</option>
+							  <option>Elogios/ Sugestões/ Reclamações</option>
+							  <option>Outros</option>
+							</select>
+				  		</div>
 				  		<div class="form-group">
 				  			<label for="mensagem">Mensagem*</label>
 						  	<textarea name="mensagem" name="text" id="mensagem" class="form-control" placeholder="Digite sua Messagem"></textarea> 

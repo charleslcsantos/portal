@@ -56,8 +56,18 @@ function valida(){
 
 }
 
-function cr_valida () {
-    alert("Jóia! Seu currículo foi enviado. Nosso RH irá analisa-lo e entrar em contato");
+function cr_valida() {
+    var nome = document.getElementById("cr_nome");
+    var email = document.getElementById("cr_email");
+    var pdf = document.getElementById("cr_pdf");
+
+    if((nome.value == "") || (email.value == "") || (pdf.value == "")){
+        alert("Preencha os campos obrigatórios (*)");
+        return false;
+    } else {
+        document.cr_form.submit();
+        return true;
+    }
 }
 
 function simulate_click (btn) {
