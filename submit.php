@@ -12,7 +12,7 @@ if(($nome=="") || ($mensagem=="") || ($email=="")){
 	</script> ");	
 }else{
 
-	mail("adm.mbsolutions@gmail.com","Mensagem enviada via PortalMB","
+	mail("tarso@portalmb.com.br","Mensagem enviada via PortalMB","
 			Assunto: $assunto \n
 			Mensagem: $mensagem \n
 			Esta mensagem foi enviada pelo PortalMB. Segue abaixo os dados do remetente:
