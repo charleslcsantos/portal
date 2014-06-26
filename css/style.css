@@ -47,20 +47,19 @@
   bottom: 30px;
 }
 .slider-nav__item {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   float: left;
   clear: none;
   display: block;
-  margin: 0 2px;
-  border: 2px solid #FFF;
-  border-radius: 10px;
+  margin: 0 5px;
+  background: #fff;
 }
 .slider-nav__item:hover {
   background: #ccc;
 }
 .slider-nav__item--current {
-  background: #FFF;
+  background: #ccc;
 }
 *,
 *:before,
@@ -249,7 +248,7 @@ header .content nav.in a {
   }
 }
 .wrapper .slider .slide .slide-message h1 {
-  font-size: 50px;
+  font-size: 450%;
   margin-bottom: 0;
 }
 @media (max-height: 480px) {
@@ -258,7 +257,7 @@ header .content nav.in a {
   }
 }
 .wrapper .slider .slide .slide-message p {
-  font-size: 25px;
+  font-size: 200%;
 }
 @media (max-height: 480px) {
   .wrapper .slider .slide .slide-message p {
@@ -351,7 +350,7 @@ header .content nav.in a {
   padding-bottom: 40px;
 }
 #services .service-cover .slide,
-#services .service-cover .carousel-inner > .item {
+#services .service-cover .item img {
   height: 90%;
   width: 100%;
 }
