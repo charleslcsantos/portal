@@ -56,14 +56,16 @@
 }
 
 .slider-nav__item {
-	width: 12px;
-	height: 12px;
+	width: 15px;
+	height: 15px;
 	float: left;
 	clear: none;
 	display: block;
-	margin: 0 5px;
-	background: #fff;
+	margin: 0 2px;
+	border: 2px solid #FFF;
+	border-radius: 10px;
+	&:hover {
+		background: #ccc; 
+	}
 }
-
-.slider-nav__item:hover { background: #ccc; }
-.slider-nav__item--current { background: #ccc; }
+.slider-nav__item--current { background: #FFF; }
